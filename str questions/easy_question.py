@@ -151,4 +151,82 @@ for i in s:
         x+=i
 print(x)
 '''
+#8)Remove all special characters from a string (keep only letters & digits).
+#Example Input: he!!o@123#wor$ld | Example Output: heo123world
 
+'''
+s = 'he!!o@123#wor$ld '
+x = ''
+
+for i in s:
+    if i.isalnum() == True:
+        x = x + i
+print(x)
+
+#----------------------------------------------------------
+
+s = 'he!!o@123#wor$ld'
+x = ''
+for i in s:
+    if ('A'<=i<='Z') or ('a'<=i<='z') or ('0'<=i<='9'):
+        x = x+i
+print(x)
+'''
+
+#Q9) Check if two strings are anagrams of each other (without using sorted()).
+#Example Input:s1 = "listen"s2 = "silent" | Example Output: True
+
+'''
+s = "listen"
+s2 = "silent"
+
+a = False
+if len(s) != len(s2):
+    print(False)
+else:
+    a = True
+    for i in s:
+        if s.count(i) != s2.count(i):
+            a = False
+print(a)
+
+#------------------------------------------
+
+d = {}
+d1 = {}
+
+for i in s:
+    d[i] = d.get(i,0)+1
+for j in s2:
+    d1[j] = d1.get(j,0)+1
+
+print(d == d1)
+'''
+
+#Q10) Find the vowel count and consonant count in a string (ignore spaces & special characters).
+#Example Input: "Hello World!" | Example Output: Vowels: 3 Consonants: 7
+
+s = 'Hello World!'
+vowels = 0
+con = 0
+
+for i in s:
+    if i in 'aeiouAEIOU':
+        vowels+=1
+    else:
+        if i.isalpha() == True:
+            con+=1
+print(vowels)
+print(con)
+
+v = 0
+c = 0
+for i in s:
+    if ('A'<=i<='Z') or ('a'<=i<='z'):
+        if i in 'aeiouAEIOU':
+            v+=1
+        else:
+            c+=1
+print(v)
+print(c)
+        

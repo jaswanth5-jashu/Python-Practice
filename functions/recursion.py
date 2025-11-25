@@ -16,10 +16,7 @@ def fin(n):
         return n
     return fin(n-1)+fin(n-2)
 
-def fab(x):
-    return fin(x-1)
-
-print(fab(1))
+print(fin(5-1))
 '''
 
 #sum of digitd in recursive
