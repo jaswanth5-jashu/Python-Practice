@@ -29,4 +29,27 @@ print(opp(5))
 '''
 
 #print pattern 54321012345
+'''
+def pattern(n):
+    print(n,end='')
+    if n == 0:
+        return 0
+    pattern(n-1)
+    print(n,end = '')
 
+    
+pattern(5)
+'''
+#sum of elements in list
+
+'''
+n = [1,2,3,4,5,6]
+
+def sumof(n):
+    if len(n) == 0:
+        return 0
+    else:
+        return n[0]+sumof(n[1:])
+
+print(sumof(n))
+'''
