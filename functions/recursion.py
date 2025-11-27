@@ -53,3 +53,48 @@ def sumof(n):
 
 print(sumof(n))
 '''
+
+#nested list to single list using recursive
+#i/p = [1,[2,3],4,[5],[6,7,8,9],10] | o/p = [1,2,3,4,5,6,7,8,9,10]
+'''
+def flattenlist(n):
+    out = []
+    for i in n:
+        if type(i) == list:
+            out.extend(flattenlist(i))
+        else:
+            out.append(i)
+    return out
+
+n = [1,[2,3],4,[5],[6,7,8,9],10] 
+print(flattenlist(n))
+'''
+#check given number is prime or not
+
+'''
+def isprime(n,i=2):
+    if n<=1:
+        return False
+    if i*i>n:
+        return 'Prime'
+    if n%i == 0:
+        return 'Not prime'
+    return isprime(n,i+1)
+    
+print(isprime(5))
+'''
+
+#n even numbers by using recursive function
+'''
+def iseven(n):
+    if n < 0:
+        return 
+    else:
+        if n%2 == 0:
+            print(n)
+    iseven(n-1)
+
+iseven(5)
+'''
+        
+ 
