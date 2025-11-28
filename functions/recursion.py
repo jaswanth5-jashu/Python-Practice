@@ -86,15 +86,15 @@ print(isprime(5))
 
 #n even numbers by using recursive function
 '''
-def iseven(n):
-    if n < 0:
+def iseven(n,i=0):
+    if n == 0:
         return 
     else:
-        if n%2 == 0:
-            print(n)
-    iseven(n-1)
-
+        print(i,end=' ')
+        iseven(n-1,i+2)
+        
 iseven(5)
 '''
+
         
  
