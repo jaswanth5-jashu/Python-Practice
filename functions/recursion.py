@@ -95,6 +95,22 @@ def iseven(n,i=0):
         
 iseven(5)
 '''
-
-        
- 
+#n odd numbers by using recursion function
+'''
+def isodd(n,i=1):
+    if n == 0:
+        return 
+    else:
+        print(i,end=" ")
+        isodd(n-1,i+2)
+isodd(5)
+'''
+#sum of digites using recursion function
+'''
+def sum_digit(n):
+    if n == 0:
+        return 0
+    else:
+        return (n%10) + sum_digit(n//10)
+print(sum_digit(12345))
+'''
