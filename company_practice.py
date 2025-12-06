@@ -213,3 +213,100 @@ for i in y:
         c+=1
 print(c)
 '''
+
+#--------------------------------------------------------
+'''
+Problem 1 — “Character Frequency Compression”
+
+You are given a string S consisting of lowercase letters.
+You must compress it by counting how many times each character appears in the entire string.
+
+BUT output must be in sorted order of characters.
+
+Input
+bbbaaaccd
+
+Output
+a3b3c2d1
+
+
+s = "bbbaaaccd"
+res = sorted(s)
+r = ''
+i = 0
+while i<len(res):
+    c = 1
+    while i+1<len(res) and res[i] == res[i+1]:
+            c+=1
+            i+=1
+    r = r+res[i]+str(c)
+    i+=1
+print(r)
+'''
+'''
+Problem 2 — “Even-Odd Sum Checker”
+
+Given a list of integers, find:
+
+Sum of even numbers
+
+Sum of odd numbers
+
+If even sum > odd sum, print "EVEN"
+If odd sum > even sum, print "ODD"
+If equal, print "EQUAL".
+
+Input
+7
+1 2 3 4 5 6 7
+
+Output
+ODD
+
+
+x = [1,2,3,4,5,6,7]
+even = [i for i in x if i%2 ==0]
+odd = [j for j in x if j%2 !=0]
+
+if sum(even)>sum(odd):
+    print('EVEN')
+else:
+    print('ODD')
+'''
+'''
+Problem 3 — “First Non-Repeating Character”
+
+You are given a string S.
+Find the first character that does NOT repeat anywhere in the string.
+If all characters repeat, print -1.
+
+Input
+aabbcdde
+
+Output
+c
+
+s = "aabbcdde"
+for i in range(len(s)):
+    if s.count(s[i]) == 1:
+        print(s[i])
+        break
+'''
+'''
+Problem 4 — “Count Unique Pairs With Sum K”
+
+Given an array and a value K, count unique pairs (a, b) such that:
+
+a + b = K
+
+
+Pairs must be unique → (2,5) and (5,2) are same → count ONCE.
+
+Input
+N = 6
+arr = 1 5 7 -1 5 2
+K = 6
+
+Output
+2
+'''
