@@ -310,3 +310,63 @@ K = 6
 Output
 2
 '''
+#-----------------------------------------------------------------------------------------
+'''
+Q2. Find character frequency but print only characters that appear more than once.
+Input: "programming"
+Output: {r:2, g:2, m:2}
+
+s = "programming"
+d = {}
+for i in s:
+    if s.count(i) >= 2:
+        d[i] = d.get(i,0)+1
+print(d)
+'''
+'''
+Q3. Merge two dictionaries but if a key collides, store values in a list.
+Input: {'a':10, 'b':20}, {'b':5, 'c':40}
+Output: {'a':10, 'b':[20,5], 'c':40}
+
+s = {'a':10, 'b':20}
+s1 = {'b':5, 'c':40}
+for k,v in s1.items():
+    if k in s:
+        if type(s[k]) == list:
+            s[k].append(v)
+        else:
+            s[k] = [s[k],v]
+    else:
+        s[k]= v
+print(s)
+'''
+'''
+2️⃣ List / Tuple / Set
+
+Q4. Move all zeros to the end without using extra list.
+Input: [0,2,0,5,0,3]
+Output: [2,5,3,0,0,0]
+
+l = [0,2,0,5,0,3]
+w = 0
+for i in range(len(l)):
+    if l[i] !=0:
+        l[w] = l[i]
+        w+=1
+for i in range(w,len(l)):
+    l[i] = 0
+print(l)
+'''
+
+s = 'abcdabcdd'
+l = ''
+for i in range(len(s)):
+    for j in range(i+1,len(s)+1):
+        sub = s[i:j]
+        
+        if len(sub)>len(l):
+            l = sub
+print(l)
+        
+        
+    
